@@ -14,7 +14,6 @@ The main objective of this project is to:
 - Build models for **forecasting weather conditions** over multiple years  
 
 This project demonstrates fundamental data engineering and machine learning practices.
-
 ---
 
 ## 📂 Dataset

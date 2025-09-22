@@ -1,5 +1,4 @@
 # Precipitation Data Analysis and Forecasting 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Precipitation+Data+Analysis+and+Forecasting+for+students)](https://git.io/typing-svg)
 
 This repository contains a project focused on the analysis of precipitation data and forecasting weather conditions for several years ahead.  
 The work was completed as part of the **Data-Engineering-Dataset** course.  
@@ -24,7 +23,7 @@ The dataset used in this project can be accessed here:
 
 
 
-## 🚀 Installation & Usage
+## 🚀 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Installation+&+Usage)](https://git.io/typing-svg)
 
 Follow these steps to set up the environment and run the project:
 

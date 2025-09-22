@@ -21,6 +21,46 @@ This project demonstrates fundamental data engineering and machine learning prac
 The dataset used in this project can be accessed here:  
 [📎 Precipitation dataset (Google Drive)](https://drive.google.com/file/d/1NPjKJoVKQWytdYYEIFn7WQGVL6Tljo_L/view?usp=drive_link)
 
----
+
+````markdown
+## 🚀 Installation & Usage
+
+Follow these steps to set up the environment and run the project:
+
+### 1. Create and activate a conda environment
+```bash
+conda create -n my_env python=3.13 pip
+conda activate my_env
+````
+
+### 2. Install Poetry
+
+```bash
+pip install poetry
+```
+
+### 3. Create a new Poetry project (if needed)
+
+```bash
+poetry new my_project
+cd my_project
+```
+
+### 4. Add dependencies with Poetry
+
+```bash
+poetry add jupyterlab pandas matplotlib gdown wget
+```
+
+### 5. Install dependencies
+
+```bash
+poetry install --no-root
+```
+
+### 6. (Optional) Install extra packages via pip
+```bash
+pip install pandas gdown
+```
 
 

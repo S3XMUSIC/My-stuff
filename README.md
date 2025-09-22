@@ -49,7 +49,7 @@ cd my_project
 ### 4. Add dependencies with Poetry
 
 ```bash
-poetry add jupyterlab pandas matplotlib gdown wget
+poetry add jupyterlab pandas matplotlib wget
 ```
 
 ### 5. Install dependencies
@@ -60,7 +60,15 @@ poetry install --no-root
 
 ### 6. (Optional) Install extra packages via pip
 ```bash
-pip install pandas gdown
+pip install gdown
 ```
+## 📷 Script Output Example
+
+When running the script `data_loader.py`, the dataset is automatically downloaded from Google Drive, saved locally, and the first 10 rows are displayed in the console.
+
+Example run:
+
+```bash
+(my_env) C:\Users\cdolg\my_project> python data_loader.py
 
 

@@ -1,5 +1,3 @@
-
-
 import gdown # специально для Gdrive
 import pandas as pd
 

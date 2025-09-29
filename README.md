@@ -83,6 +83,9 @@ Example run:
 (my_env) C:\Users\cdolg\my_project> python data_loader.py
 ```
 
+<img width="1107" height="632" alt="image" src="https://github.com/user-attachments/assets/15fd6e94-4398-42c6-a4fc-9c668683588e" />
+
+
 The script will output:
 - First 10 rows of the dataset
 - Data types before processing
@@ -110,15 +113,6 @@ my_project/
 ├── pyproject.toml         # Poetry configuration
 └── README.md              # Project documentation
 ```
-## 📷 Script Output Example
 
-When running the script `data_loader.py`, the dataset is automatically downloaded from Google Drive, saved locally, and the first 10 rows are displayed in the console.
-
-Example run:
-
-```bash
-(my_env) C:\Users\cdolg\my_project> python data_loader.py
-```
-<img width="1107" height="632" alt="image" src="https://github.com/user-attachments/assets/15fd6e94-4398-42c6-a4fc-9c668683588e" />
 
 

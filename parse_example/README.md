@@ -78,7 +78,8 @@ The parser creates `cocktails.csv` with all collected data, ready for:
 - Python 3.7+
 - requests library
 
-  
+## 📷 Script Output Example
+
 Example run:
 
 ```bash

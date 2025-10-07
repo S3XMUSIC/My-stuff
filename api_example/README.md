@@ -62,12 +62,6 @@ data = fetch_cocktails_by_first_letter('a')
 Example run:
 
 ```bash
-(my_env) C:\Users\cdolg\my_project> python data_loader.py
-```
-
-Example run:
-
-```bash
 (second_my_env) C:\Users\cdolg\api> python api_reader.py
 ```
 

@@ -2,7 +2,7 @@
 # Cocktail Explorer API 🍸
 
 A sleek Python wrapper for The CocktailDB API with data processing capabilities.
-
+```
 ## Quick Start
 
 ### 1. Create Environment

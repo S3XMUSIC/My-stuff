@@ -2,6 +2,7 @@
 # Cocktail Parser 🍸
 
 A simple and efficient Python parser for fetching cocktail data from The CocktailDB API.
+[📎 The CocktailDB API](https://www.thecocktaildb.com/)
 
 ## Quick Start
 

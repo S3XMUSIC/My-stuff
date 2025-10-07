@@ -78,6 +78,12 @@ The parser creates `cocktails.csv` with all collected data, ready for:
 - Python 3.7+
 - requests library
 
+  
+Example run:
+
+```bash
+(second_my_env) C:\Users\cdolg\api> python data_parser.py
+```
 
 <img width="1448" height="565" alt="image" src="https://github.com/user-attachments/assets/18757ed8-db18-45e9-a81d-829807de55f2" />
 <img width="1469" height="690" alt="image" src="https://github.com/user-attachments/assets/e1e238a2-351c-4260-b61b-b3f3e7bc08c1" />

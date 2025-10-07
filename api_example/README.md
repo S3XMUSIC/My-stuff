@@ -55,6 +55,12 @@ data = fetch_cocktails_by_first_letter('a')
 ## Requirements
 - Python 3.7+
 - pandas, requests
+- 
+Example run:
+
+```bash
+(second_my_env) C:\Users\cdolg\api> python api_reader.py
+```
 
 <img width="1458" height="588" alt="image" src="https://github.com/user-attachments/assets/3a08034a-fcb9-4502-9c35-3d226360d9a0" />
 <img width="1463" height="700" alt="image" src="https://github.com/user-attachments/assets/c5b31c03-9c71-46ae-b51b-47e45dca8d39" />

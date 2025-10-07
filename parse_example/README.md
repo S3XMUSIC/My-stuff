@@ -83,7 +83,7 @@ The parser creates `cocktails.csv` with all collected data, ready for:
 Example run:
 
 ```bash
-(second_my_env) C:\Users\cdolg\api> python data_parser.py
+(second_my_env) C:\Users\cdolg\api_project> python data_parser.py
 ```
 
 <img width="1448" height="565" alt="image" src="https://github.com/user-attachments/assets/18757ed8-db18-45e9-a81d-829807de55f2" />

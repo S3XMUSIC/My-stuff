@@ -56,3 +56,8 @@ data = fetch_cocktails_by_first_letter('a')
 - Python 3.7+
 - pandas, requests
 
+<img width="1458" height="588" alt="image" src="https://github.com/user-attachments/assets/3a08034a-fcb9-4502-9c35-3d226360d9a0" />
+<img width="1463" height="700" alt="image" src="https://github.com/user-attachments/assets/c5b31c03-9c71-46ae-b51b-47e45dca8d39" />
+<img width="1456" height="376" alt="image" src="https://github.com/user-attachments/assets/a3547ff2-40b3-41f6-9885-98cf7aa65df8" />
+
+

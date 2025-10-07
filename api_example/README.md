@@ -2,7 +2,7 @@
 # Cocktail Explorer API 🍸
 
 A sleek Python wrapper for The CocktailDB API with data processing capabilities.
-[📎 The CocktailDB API](https://drive.google.com/file/d/1NPjKJoVKQWytdYYEIFn7WQGVL6Tljo_L/view?usp=drive_link)
+[📎 The CocktailDB API](https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita)
 
 ## Quick Start
 

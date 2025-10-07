@@ -76,6 +76,3 @@ The parser creates `cocktails.csv` with all collected data, ready for:
 
 - Python 3.7+
 - requests library
-
-- **Визуальный** - с таблицами и примерами вывода
-- **Краткий** - только самая важная информация

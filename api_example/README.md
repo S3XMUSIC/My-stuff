@@ -55,7 +55,15 @@ data = fetch_cocktails_by_first_letter('a')
 ## Requirements
 - Python 3.7+
 - pandas, requests
-- 
+
+## 📷 Script Output Example
+
+Example run:
+
+```bash
+(my_env) C:\Users\cdolg\my_project> python data_loader.py
+```
+
 Example run:
 
 ```bash

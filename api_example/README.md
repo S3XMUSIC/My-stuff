@@ -1,9 +1,9 @@
 ```markdown
-# Cocktail API Data Fetcher 🍸
+Cocktail API Data Fetcher 🍸
 
 A script for fetching and analyzing cocktail data from The CocktailDB API.
 
-## Description
+Description
 
 This project provides tools for:
 - Fetching cocktail data by the first letter of their name
@@ -11,15 +11,15 @@ This project provides tools for:
 - Processing and analyzing data using pandas
 - Saving results to CSV files
 
-## Installation and Environment Setup
+Installation and Environment Setup
 
-### 1. Creating Virtual Environment with Conda
+1. Creating Virtual Environment with Conda
 
 ```bash
-# Create a new environment with Python 3.9
+Create a new environment with Python 3.9
 conda create -n cocktail-env python=3.9
 
-# Activate the environment
+Activate the environment
 conda activate cocktail-env
 ```
 

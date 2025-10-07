@@ -13,7 +13,7 @@ conda activate cocktail-api
 
 ### 2. Run the Script
 ```bash
-python cocktail_api.py
+python api_reader.py
 ```
 
 ## Features

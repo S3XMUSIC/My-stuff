@@ -6,7 +6,6 @@ from sqlalchemy import create_engine, inspect
 #  Подключение к creds.db 
 
 def load_pg_creds(sqlite_path="creds.db"):
-    # Извлекаем параметры подключения из локальной базы SQLite
     try:
         with sqlite3.connect(sqlite_path) as conn:
             creds = pd.read_sql_query("SELECT url, port, user, pass FROM access LIMIT 1;", conn)
@@ -18,7 +17,6 @@ def load_pg_creds(sqlite_path="creds.db"):
 #  Загрузка и подготовка данных 
 
 def prepare_dataset(file_path="dataset.csv", max_rows=10):  # Уменьшил для теста
-    # Загружает CSV, приводит названия столбцов к нижнему регистру и выбирает первые строки
     try:
         df = pd.read_csv(file_path).head(max_rows)
         df.columns = [col.strip().lower().replace(" ", "_") for col in df.columns]
@@ -31,7 +29,6 @@ def prepare_dataset(file_path="dataset.csv", max_rows=10):  # Уменьшил �
 #  Запись в PostgreSQL 
 
 def upload_to_postgres(df, creds, table_name="dolgikh_test"): 
-   
     try:
         conn_str = f"postgresql+psycopg2://{creds['user']}:{creds['pass']}@{creds['url']}:{creds['port']}/freezone"
         print(f" Подключаемся к: {creds['url']}:{creds['port']}/freezone")

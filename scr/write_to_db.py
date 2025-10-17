@@ -16,19 +16,20 @@ def load_pg_creds(sqlite_path="creds.db"):
 
 #  Загрузка и подготовка данных 
 
-def prepare_dataset(file_path="dataset.csv", max_rows=10):  # Уменьшил для теста
+def prepare_dataset(file_path="datasetshort.csv", max_rows=10): 
     try:
         df = pd.read_csv(file_path).head(max_rows)
         df.columns = [col.strip().lower().replace(" ", "_") for col in df.columns]
         print(f" Загружено {len(df)} строк с колонками: {list(df.columns)}")
         return df
     except Exception as e:
-        print(f" Ошибка при загрузке dataset.csv: {e}")
+        print(f" Ошибка при загрузке datasetshort.csv: {e}")
         return None
 
 #  Запись в PostgreSQL 
 
 def upload_to_postgres(df, creds, table_name="dolgikh_test"): 
+    
     try:
         conn_str = f"postgresql+psycopg2://{creds['user']}:{creds['pass']}@{creds['url']}:{creds['port']}/freezone"
         print(f" Подключаемся к: {creds['url']}:{creds['port']}/freezone")
@@ -81,7 +82,7 @@ def verify_upload(engine, table_name="dolgikh_test"):
 #  Тестовый запуск на freezone 
 
 def test_freezone_upload():
-    
+    # Тестируем загрузку на базу freezone
     print(" ТЕСТИРУЕМ НА БАЗЕ FREEZONE")
     print("=" * 50)
     
@@ -91,19 +92,19 @@ def test_freezone_upload():
     if credentials is None:
         return False
     
-    # Подготовка данных (меньше строк для теста)
+    
     print(" Подготовка датасета")
-    data_sample = prepare_dataset("dataset.csv", max_rows=10)
+    data_sample = prepare_dataset("datasetshort.csv", max_rows=10)
     if data_sample is None:
         return False
     
-    # Загрузка в freezone
+    
     print(" Загрузка в PostgreSQL (freezone)")
     pg_engine = upload_to_postgres(data_sample, credentials, table_name="dolgikh_test")
     if pg_engine is None:
         return False
     
-    # Проверка
+    #
     print(" Проверка результата")
     success = verify_upload(pg_engine, "dolgikh_test")
     
@@ -128,7 +129,7 @@ if __name__ == "__main__":
             print("=" * 50)
             
             credentials = load_pg_creds()
-            full_data = prepare_dataset("dataset.csv", max_rows=100)  
+            full_data = prepare_dataset("datasetshort.csv", max_rows=100)  
             
             # Меняем базу данных на homeworks в строке подключения
             conn_str = f"postgresql+psycopg2://{credentials['user']}:{credentials['pass']}@{credentials['url']}:{credentials['port']}/homeworks"

@@ -31,7 +31,7 @@ def prepare_dataset(file_path="dataset.csv", max_rows=10):  # Уменьшил �
 #  Запись в PostgreSQL 
 
 def upload_to_postgres(df, creds, table_name="dolgikh_test"): 
-    # Создаём соединение и выгружает данные в таблицу PostgreSQL.
+   
     try:
         conn_str = f"postgresql+psycopg2://{creds['user']}:{creds['pass']}@{creds['url']}:{creds['port']}/freezone"
         print(f" Подключаемся к: {creds['url']}:{creds['port']}/freezone")
@@ -84,29 +84,29 @@ def verify_upload(engine, table_name="dolgikh_test"):
 #  Тестовый запуск на freezone 
 
 def test_freezone_upload():
-    # Тестируем загрузку на базу freezone
+    
     print(" ТЕСТИРУЕМ НА БАЗЕ FREEZONE")
     print("=" * 50)
     
-    # 1. Чтение учётных данных
+    # Чтение учётных данных
     print(" Чтение учётных данных из creds.db")
     credentials = load_pg_creds()
     if credentials is None:
         return False
     
-    # 2. Подготовка данных (меньше строк для теста)
+    # Подготовка данных (меньше строк для теста)
     print(" Подготовка датасета")
     data_sample = prepare_dataset("dataset.csv", max_rows=10)
     if data_sample is None:
         return False
     
-    # 3. Загрузка в freezone
+    # Загрузка в freezone
     print(" Загрузка в PostgreSQL (freezone)")
     pg_engine = upload_to_postgres(data_sample, credentials, table_name="dolgikh_test")
     if pg_engine is None:
         return False
     
-    # 4. Проверка
+    # Проверка
     print(" Проверка результата")
     success = verify_upload(pg_engine, "dolgikh_test")
     

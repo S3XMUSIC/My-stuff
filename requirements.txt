@@ -35,6 +35,7 @@ findpython==0.7.0
 fonttools==4.60.0
 fqdn==1.5.1
 gdown==5.2.0
+greenlet==3.2.4
 h11==0.16.0
 httpcore @ file:///C:/b/abs_25m7_xthp6/croot/httpcore_1748526065845/work
 httpx @ file:///C:/b/abs_9fclaf1b46/croot/httpx_1746747856672/work
@@ -102,6 +103,8 @@ poetry-core==2.2.0
 prometheus_client==0.22.1
 prompt_toolkit==3.0.52
 psutil @ file:///C:/miniconda3/conda-bld/psutil_1757104557380/work
+psycopg2==2.9.11
+psycopg2-binary==2.9.11
 pure_eval==0.2.3
 pycparser==2.23
 Pygments==2.19.2
@@ -129,6 +132,7 @@ rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
 rpds-py==0.27.1
+seaborn==0.13.2
 Send2Trash==1.8.3
 setuptools==72.1.0
 shellingham==1.5.4
@@ -136,6 +140,7 @@ sip @ file:///C:/b/abs_5cto136kse/croot/sip_1738856220313/work
 six==1.17.0
 sniffio==1.3.1
 soupsieve==2.8
+SQLAlchemy==2.0.44
 stack-data==0.6.3
 terminado==0.18.1
 tinycss2==1.4.0

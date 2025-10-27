@@ -49,7 +49,7 @@ cd my_project
 
 ### 4. Add dependencies with Poetry
 ```bash
-poetry add jupyterlab pandas matplotlib gdown
+pip install pandas gdown jupyterlab matplotlib seaborn plotly statsmodels numpy
 ```
 
 ### 5. Install dependencies
@@ -101,7 +101,11 @@ Main dependencies required for this project:
 - `gdown` - Download files from Google Drive
 - `jupyterlab` - Interactive development environment
 - `matplotlib` - Data visualization
+- `seaborn` - Statistical data visualization
+- `statsmodels` - Statistical models and time series decomposition
+- `plotly` - Interactive visualizations and dashboards
 
+plotly - Interactive visualizations and dashboards
 ---
 
 ## 📁 Project Structure

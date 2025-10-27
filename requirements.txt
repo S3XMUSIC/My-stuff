@@ -80,6 +80,7 @@ mkl_random @ file:///C:/b/abs_47jvsmau4j/croot/mkl_random_1751310922820/work
 more-itertools==10.8.0
 msgpack==1.1.1
 mypy_extensions==1.1.0
+narwhals==2.10.0
 nbclient==0.10.2
 nbconvert==7.16.6
 nbformat==5.10.4
@@ -94,10 +95,12 @@ pandas @ file:///C:/b/abs_58a1hlvjeo/croot/pandas_1756466410850/work/dist/pandas
 pandocfilters==1.5.1
 parso==0.8.5
 pathspec==0.12.1
+patsy==1.0.2
 pbs-installer==2025.9.2
 pillow==11.3.0
 pkginfo==1.12.1.2
 platformdirs==4.4.0
+plotly==6.3.1
 poetry==2.2.0
 poetry-core==2.2.0
 prometheus_client==0.22.1
@@ -132,6 +135,7 @@ rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
 rpds-py==0.27.1
+scipy==1.16.2
 seaborn==0.13.2
 Send2Trash==1.8.3
 setuptools==72.1.0
@@ -142,6 +146,7 @@ sniffio==1.3.1
 soupsieve==2.8
 SQLAlchemy==2.0.44
 stack-data==0.6.3
+statsmodels==0.14.5
 terminado==0.18.1
 tinycss2==1.4.0
 tomlkit==0.13.3

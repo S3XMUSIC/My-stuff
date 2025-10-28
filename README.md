@@ -35,13 +35,11 @@ project/
 │   ├── transform.py       # Data transformation and cleaning
 │   ├── load.py            # Loading to DB and export to parquet
 │   ├── validate.py        # Data validation
-│   └── main.py            # CLI entry point
-├── EDA.ipynb              # Exploratory Data Analysis
-├── notebooks/             # Additional notebooks
-├── data/                  # Data (auto-created)
-│   ├── raw/              # Raw data
-│   └── processed/        # Processed data
+│   └── main.py            # CLI entry point            
+├── notebooks/EDA.ipynb    # Exploratory Data Analysis 
 ├── requirements.txt       # Dependencies
+├── environment.yml       # Dependencies
+├── pyproject.toml       # Dependencies
 └── README.md
 ```
 

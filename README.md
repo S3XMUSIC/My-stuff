@@ -115,7 +115,7 @@ The project includes a reusable **ETL package** for processing the precipitation
 ```
 
 etl/
-- **init**.py
+- init.py
 - extract.py       # Download CSV from Google Drive and basic validation
 - transform.py     # Convert data types and clean data
 - load.py          # Save up to 100 rows to PostgreSQL and parquet
@@ -123,9 +123,6 @@ etl/
 - main.py          # CLI entry point to run the full pipeline
 
 ````
-
-> The `data/` folder stores raw and processed files and **is not tracked by git**.
-
 ---
 
 ### Running the ETL

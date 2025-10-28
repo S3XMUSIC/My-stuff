@@ -1,9 +1,3 @@
-"""
-extract.py
-- скачивает CSV из Google Drive (gdown) по FILE_ID или URL
-- валидирует базовые вещи (файл существует, читается pandas)
-- сохраняет исходный CSV в data/raw/<output_filename>
-"""
 
 import os
 from pathlib import Path
@@ -15,11 +9,7 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def download_from_gdrive(file_id: str, output_name: str = "dataset.csv", url: str | None = None) -> Path:
-    """
-    Скачивает файл с Google Drive.
-    Можно либо указать file_id (рекомендуется), либо url.
-    Возвращает путь к сохранённому файлу.
-    """
+   ## Скачиваем файл с Google Drive по ID или ссылке
     if url is None:
         url = f"https://drive.google.com/uc?id={file_id}"
     out_path = RAW_DIR / output_name
@@ -29,7 +19,7 @@ def download_from_gdrive(file_id: str, output_name: str = "dataset.csv", url: st
 
 
 def basic_validate_csv(path: Path) -> bool:
-    """Проверка: читается pandas и имеет хотя бы 1 строку."""
+    ## Проверяет что CSV читается и содержит данные
     try:
         df = pd.read_csv(path)
         if df.shape[0] == 0:
@@ -43,9 +33,7 @@ def basic_validate_csv(path: Path) -> bool:
 
 
 def extract(file_id: str | None = None, url: str | None = None, output_name: str = "dataset.csv") -> Path:
-    """
-    Основная функция извлечения. Вернёт путь сохранённого csv или вызовет исключение.
-    """
+    ## Основная функция загрузки данных
     if file_id is None and url is None:
         raise ValueError("Нужно указать file_id или url для скачивания.")
     path = download_from_gdrive(file_id=file_id or "", output_name=output_name, url=url)
@@ -62,3 +50,4 @@ if __name__ == "__main__":
     p.add_argument("--output", help="Имя выходного csv", default="dataset.csv")
     args = p.parse_args()
     extract(file_id=args.file_id, output_name=args.output)
+

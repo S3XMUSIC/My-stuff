@@ -28,19 +28,34 @@ The dataset is automatically downloaded and processed by the ETL pipeline.
 ## 🏗️ Project Structure
 
 ```
-project/
-├── etl/                    # ETL pipeline
+MY-STUFF/
+├── api_example/              # API examples and integration
+│   ├── api_reader.py
+│   ├── environment.yml
+│   ├── pyproject.toml
+│   ├── README.md
+│   └── requirements.txt
+├── etl/                      # ETL pipeline package
 │   ├── __init__.py
-│   ├── extract.py         # Data loading from Google Drive
-│   ├── transform.py       # Data transformation and cleaning
-│   ├── load.py            # Loading to DB and export to parquet
-│   ├── validate.py        # Data validation
-│   └── main.py            # CLI entry point            
-├── notebooks/EDA.ipynb    # Exploratory Data Analysis 
-├── requirements.txt       # Dependencies
-├── environment.yml       # Dependencies
-├── pyproject.toml       # Dependencies
-└── README.md
+│   ├── extract.py           # Data loading from Google Drive
+│   ├── transform.py         # Data transformation and cleaning
+│   ├── load.py              # Loading to DB and export to parquet
+│   ├── validate.py          # Data validation
+│   └── main.py              # CLI entry point
+├── notebook/                 # Jupyter notebooks
+│   └── EDA.ipynb            # Exploratory Data Analysis
+├── parse_example/            # Data parsing examples
+│   ├── data_parser.py
+│   ├── environment.yml
+│   ├── pyproject.toml
+│   ├── README.md
+│   └── requirements.txt
+├── .gitignore
+├── environment.yml           # Conda environment configuration
+├── oryx-build-commands.txt   # Build configuration
+├── pyproject.toml           # Python project configuration
+├── README.md
+└── requirements.txt         # Python dependencies
 ```
 
 ---

@@ -1,9 +1,3 @@
-"""
-transform.py
-- отвечает за приведение типов и базовую очистку
-- сохраняет результат в data/raw/<cleaned_csv> (перезаписывает или создает новый файл)
-- возвращает pandas.DataFrame
-"""
 
 from pathlib import Path
 import pandas as pd
@@ -80,3 +74,4 @@ if __name__ == "__main__":
     p.add_argument("--output", default="dataset_cleaned.csv")
     args = p.parse_args()
     transform(Path(args.input), args.output)
+

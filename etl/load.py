@@ -1,10 +1,3 @@
-"""
-load.py
-- читает creds.db (SQLite) для получения учетных данных PostgreSQL
-- загружает до max_rows (по умолчанию 100) в базу homeworks (Postgres)
-- сохраняет результат в parquet в data/processed
-- если creds.db отсутствует или доступ к Postgres не возможен — логирует и сохраняет parquet локально
-"""
 
 from pathlib import Path
 import sqlite3
@@ -17,7 +10,7 @@ PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def load_pg_creds(sqlite_path: str = "creds.db"):
-    """читает таблицу access в creds.db, ожидает поля url, port, user, pass"""
+    ## читает таблицу access в creds.db
     if not Path(sqlite_path).exists():
         print(f"[load] creds.db не найден по пути: {sqlite_path}")
         return None
@@ -103,3 +96,4 @@ if __name__ == "__main__":
     args = p.parse_args()
     df = pd.read_csv(args.input)
     load_and_save(df, creds_db_path=args.creds_db, table_name=args.table, max_rows=args.max_rows)
+

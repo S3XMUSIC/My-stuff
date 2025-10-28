@@ -104,11 +104,9 @@ Main dependencies required for this project:
 - `seaborn` - Statistical data visualization
 - `statsmodels` - Statistical models and time series decomposition
 - `plotly` - Interactive visualizations and dashboards
+---
 
-plotly - Interactive visualizations and dashboards
----
 ```markdown
----
 
 ## 🔄 ETL Pipeline
 
@@ -119,12 +117,12 @@ The project includes a reusable **ETL package** for processing the precipitation
 ```
 
 etl/
-├── **init**.py
-├── extract.py       # Download CSV from Google Drive and basic validation
-├── transform.py     # Convert data types and clean data
-├── load.py          # Save up to 100 rows to PostgreSQL and parquet
-├── validate.py      # Optional data validation
-└── main.py          # CLI entry point to run the full pipeline
+- **init**.py
+- extract.py       # Download CSV from Google Drive and basic validation
+- transform.py     # Convert data types and clean data
+- load.py          # Save up to 100 rows to PostgreSQL and parquet
+- validate.py      # Optional data validation
+- main.py          # CLI entry point to run the full pipeline
 
 ````
 

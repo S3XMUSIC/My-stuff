@@ -107,196 +107,46 @@ Main dependencies required for this project:
 
 plotly - Interactive visualizations and dashboards
 ---
-
-## 📁 Project Structure
-
+```markdown
 ---
+
+## 🔄 ETL Pipeline
+
+The project includes a reusable **ETL package** for processing the precipitation dataset:
+
+### Package Structure
 
 ```
 
-my_project/
-│
-├── etl/                     # Пакет ETL
-│   ├── **init**.py
-│   ├── extract.py            # Загрузка и базовая валидация CSV из Google Drive
-│   ├── transform.py          # Приведение типов, очистка данных
-│   ├── load.py               # Загрузка в PostgreSQL и сохранение parquet
-│   ├── validate.py           # Дополнительные проверки данных
-│   └── main.py               # CLI интерфейс для запуска ETL
-│
-├── data/                     # Папка с данными (НЕ пушится в git)
-│   ├── raw/                  # Сырые CSV-файлы
-│   └── processed/            # Преобразованные parquet-файлы
-│
-├── creds.db                  # SQLite с учетными данными для PostgreSQL (опционально)
-├── README.md
-├── requirements.txt
-└── .gitignore
+etl/
+├── **init**.py
+├── extract.py       # Download CSV from Google Drive and basic validation
+├── transform.py     # Convert data types and clean data
+├── load.py          # Save up to 100 rows to PostgreSQL and parquet
+├── validate.py      # Optional data validation
+└── main.py          # CLI entry point to run the full pipeline
 
 ````
 
-> ⚠️ Важно: папка `data/` добавлена в `.gitignore` и **не должна попадать в репозиторий**.
+> The `data/` folder stores raw and processed files and **is not tracked by git**.
 
 ---
 
-## 📖 Функции пакета
+### Running the ETL
 
-### 1. Extract (`extract.py`)
-- Скачивает CSV-файл из Google Drive (`file_id` или `url`) через `gdown`.
-- Базовая валидация: проверка читаемости CSV, наличия строк.
-- Сохраняет исходный CSV в `data/raw/`.
+Full pipeline:
 
-**Пример использования:**
 ```bash
-python -m etl.main extract --file-id <GDRIVE_FILE_ID> --output dataset.csv
+python -m etl.main run --file-id <GDRIVE_FILE_ID> --table <your_table_name>
 ````
 
----
+* `--file-id` — Google Drive file ID of the dataset
+* `--table` — PostgreSQL table name (max 100 rows will be loaded)
 
-### 2. Transform (`transform.py`)
-
-* Чтение CSV из `data/raw/`.
-* Приведение типов: даты → datetime, числовые колонки → float/int.
-* Удаление полностью пустых колонок.
-* Сохраняет очищенный CSV в `data/raw/`.
-
-**Пример использования:**
+Separate stages can also be executed:
 
 ```bash
-python -m etl.main transform --input data/raw/dataset.csv --output dataset_cleaned.csv
+python -m etl.main extract --file-id <GDRIVE_FILE_ID>
+python -m etl.main transform --input data/raw/dataset.csv
+python -m etl.main load --input data/raw/dataset_cleaned.csv --table <your_table_name>
 ```
-
----
-
-### 3. Validate (`validate.py`)
-
-* Проверяет:
-
-  * нет полностью пустых колонок
-  * обязательные колонки присутствуют
-  * датафрейм не пустой
-* Вызов встроен в пайплайн перед загрузкой.
-
----
-
-### 4. Load (`load.py`)
-
-* Чтение `creds.db` (SQLite) для получения учетных данных PostgreSQL.
-* Загрузка до 100 строк в базу `homeworks`, схема `public`.
-* Сохраняет результат в parquet: `data/processed/<table_name>_processed.parquet`.
-* Если Postgres недоступен — сохраняет parquet локально.
-
-**Пример использования:**
-
-```bash
-python -m etl.main load --input data/raw/dataset_cleaned.csv --table dolgikh --max-rows 100 --creds-db creds.db
-```
-
----
-
-### 5. Main CLI (`main.py`)
-
-* Объединяет весь пайплайн: **extract → transform → validate → load**.
-* Минимальный обязательный аргумент: команда `run`, `extract`, `transform` или `load`.
-* Для команды `run` обязательно указывать `--file-id`.
-
-**Пример полного запуска:**
-
-```bash
-python -m etl.main run --file-id 1NPjKJoVKQWytdYYEIFn7WQGVL6Tljo_L
-```
-
-**Пример с кастомными настройками:**
-
-```bash
-python -m etl.main run \
-    --file-id 1NPjKJoVKQWytdYYEIFn7WQGVL6Tljo_L \
-    --output dataset.csv \
-    --cleaned-name dataset_cleaned.csv \
-    --table dolgikh \
-    --max-rows 100 \
-    --creds-db creds.db
-```
-
----
-
-## 💡 Требования
-
-* Python >= 3.9
-* Библиотеки:
-
-```bash
-pip install -r requirements.txt
-```
-
-Список зависимостей в `requirements.txt`:
-
-```
-pandas
-gdown
-sqlalchemy
-psycopg2-binary
-pyarrow
-```
-
-> ⚠️ Для сохранения в `.parquet` обязательно нужен `pyarrow` или `fastparquet`.
-
----
-
-## ⚙️ Настройка
-
-1. Поместите `creds.db` в корень проекта (если требуется загрузка в PostgreSQL).
-   Таблица `access` должна содержать колонки: `url`, `port`, `user`, `pass`.
-2. Убедитесь, что каталоги `data/raw/` и `data/processed/` существуют (скрипт создаст их автоматически при запуске).
-3. Настройте `.gitignore`:
-
-```
-/data/
-__pycache__/
-*.pyc
-*.pyo
-venv/
-env/
-.my_env/
-.vscode/
-.idea/
-```
-
----
-
-## 📌 Проверка работы
-
-1. Скачайте CSV через extract.
-2. Приведите типы через transform.
-3. Валидация пройдена автоматически.
-4. Загрузите в PostgreSQL и сохраните parquet через load или run.
-
-**Пример вывода успешного выполнения:**
-
-```
-[main] START full run
-[extract] CSV прочитан: shape=(3902, 23)
-[transform] Сохранён очищенный CSV -> data/raw/dataset_cleaned.csv
-[validate] Валидация пройдена: shape=(3902, 23)
-[load] Сохранён parquet -> data/processed/dolgikh_processed.parquet
-[load] Таблица 'dolgikh' успешно загружена в схему public.
-[main] FULL RUN complete.
-```
-
----
-
-## ✅ Замечания
-
-* Таблица в PostgreSQL создаётся с именем из аргумента `--table` (по умолчанию `dolgikh`).
-* Если `creds.db` отсутствует — данные сохраняются только в parquet.
-* Старые скрипты `data_loader.py` и `write_to_db.py` **не используются и должны быть удалены**.
-
-```
-
----
-
-
-
-
-
-

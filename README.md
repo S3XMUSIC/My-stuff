@@ -106,8 +106,6 @@ Main dependencies required for this project:
 - `plotly` - Interactive visualizations and dashboards
 ---
 
-```markdown
-
 ## 🔄 ETL Pipeline
 
 The project includes a reusable **ETL package** for processing the precipitation dataset:

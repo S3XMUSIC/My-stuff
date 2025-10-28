@@ -1,10 +1,3 @@
-"""
-main.py
-- CLI для управления конвейером ETL
-- обязательный аргумент: команда (run / extract / transform / load)
-Пример:
-    python etl/main.py run --file-id <GDRIVE_FILE_ID>
-"""
 
 import argparse
 from pathlib import Path
@@ -99,3 +92,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,8 +1,4 @@
-"""
-validate.py
-- набор простых проверок (колонки, типы, пропуски)
-- можно расширять под требования
-"""
+
 
 import pandas as pd
 from pathlib import Path
@@ -35,3 +31,4 @@ def validate_df(df: pd.DataFrame, required_cols: list[str] | None = None) -> boo
         return False
     print(f"[validate] Валидация пройдена: shape={df.shape}")
     return ok
+

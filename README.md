@@ -108,14 +108,6 @@ Main dependencies required for this project:
 plotly - Interactive visualizations and dashboards
 ---
 
-# Precipitation Data Analysis and Forecasting 
-
-This repository contains a project focused on the analysis of precipitation data and forecasting weather conditions for several years ahead.  
-The work was completed as part of the **Data-Engineering-Dataset** course.  
-The project is written in **Python**.
-
----
-
 ## 📁 Project Structure
 
 ---

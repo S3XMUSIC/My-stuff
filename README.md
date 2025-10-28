@@ -47,7 +47,10 @@ project/
 
 ---
 
-## 🚀 Installation and Usage
+## 🚀 Installation & Usage
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Installation+&+Usage)](https://git.io/typing-svg)
+
+Follow these steps to set up the environment and run the project:
 
 ### 1. Create and activate conda environment
 ```bash

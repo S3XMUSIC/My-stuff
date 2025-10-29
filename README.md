@@ -146,7 +146,7 @@ The `EDA.ipynb` notebook contains:
 When running the ETL pipeline, the output includes:
 
 ```bash
-(precipitation_env) C:\Users\cdolg\my_project> python -m etl.main run --file-id 1NPjKJoVKQWytdYYEIFn7WQGVL6Tljo_L --table precipitation_data
+(my_env) C:\Users\cdolg\my_project> python -m etl.main run --file-id 1NPjKJoVKQWytdYYEIFn7WQGVL6Tljo_L --table precipitation_data
 
 [INFO] Starting ETL pipeline...
 [INFO] Data downloaded successfully: data/raw/dataset.csv

@@ -157,7 +157,11 @@ When running the ETL pipeline, the output includes:
 [INFO] 100 rows loaded to PostgreSQL table: precipitation_data
 [INFO] Data exported to parquet: data/processed/dataset_cleaned.parquet
 ```
-
+---
+##  Experiments (Please open to more info)
+- api_example 
+- parse_example 
+---
 ---
 
 ##  Dependencies

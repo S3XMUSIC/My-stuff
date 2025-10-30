@@ -19,17 +19,17 @@ python data_parser.py
 
 ## What It Does
 
-- 📥 **Fetches data** for 10 popular cocktails
-- 🧪 **Extracts ingredients** and instructions
-- 💾 **Saves to CSV** for easy analysis
-- 📊 **Displays summary** in console
+-  **Fetches data** for 10 popular cocktails
+-  **Extracts ingredients** and instructions
+-  **Saves to CSV** for easy analysis
+-  **Displays summary** in console
 
 ## Features
 
-- ✅ **Automatic ingredient collection** (up to 15 per cocktail)
-- 📝 **Instruction trimming** for clean display
-- 🎯 **Error handling** for failed requests
-- 📋 **Console preview** of first 10 cocktails
+-  **Automatic ingredient collection** (up to 15 per cocktail)
+-  **Instruction trimming** for clean display
+-  **Error handling** for failed requests
+-  **Console preview** of first 10 cocktails
 
 ## Output Example
 
@@ -38,7 +38,7 @@ python data_parser.py
 ✓ Mojito - 7 ingredients
 ✓ Martini - 4 ingredients
 
-✅ Successfully saved 10 cocktails to cocktails.csv
+ Successfully saved 10 cocktails to cocktails.csv
 ```
 
 ## Data Structure
@@ -62,16 +62,16 @@ The parser creates `cocktails.csv` with all collected data, ready for:
 
 ## Popular Cocktails Parsed
 
-- Margarita 🍋
-- Mojito 🌿
-- Martini 🍸
-- Cosmopolitan 🍊
-- Old Fashioned 🥃
-- Daiquiri 🍓
-- Manhattan 🥃
-- Whiskey Sour 🥚
-- Piña Colada 🍍
-- Bloody Mary 🍅
+- Margarita 
+- Mojito 
+- Martini 
+- Cosmopolitan 
+- Old Fashioned 
+- Daiquiri 
+- Manhattan 
+- Whiskey Sour 
+- Piña Colada 
+- Bloody Mary 
 
 ## Requirements
 

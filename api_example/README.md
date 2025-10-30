@@ -19,10 +19,10 @@ python api_reader.py
 
 ## Features
 
-- 🔍 **Search cocktails** by name or first letter
-- 📊 **Auto-convert** API data to pandas DataFrame
-- 💾 **Export results** to CSV
-- 🎯 **Smart processing** of ingredients and measurements
+-  **Search cocktails** by name or first letter
+-  **Auto-convert** API data to pandas DataFrame
+-  **Export results** to CSV
+-  **Smart processing** of ingredients and measurements
 
 ## Basic Usage
 
@@ -35,9 +35,9 @@ data = fetch_cocktails_by_first_letter('a')
 
 ## Example Output
 ```
-✅ Successfully loaded 25 cocktails
-📊 DataFrame size: (25, 9)
-📁 Saved to: cocktails_data.csv
+ Successfully loaded 25 cocktails
+ DataFrame size: (25, 9)
+ Saved to: cocktails_data.csv
 ```
 
 ## API Functions

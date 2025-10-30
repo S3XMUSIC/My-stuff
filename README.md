@@ -138,6 +138,8 @@ The `EDA.ipynb` notebook contains:
 - Statistical summaries
 - Pattern and anomaly detection
 
+[The visualization video EDA](https://drive.google.com/file/d/1iCgILjyKHeYP000iLzic6z-nT0q9_BOv/view?usp=sharing)
+
 ---
 
 ##  Example Output

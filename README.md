@@ -6,7 +6,7 @@ The project is written in **Python**.
 
 ---
 
-## 📊 Project Overview
+##  Project Overview
 The main objectives of the project:
 - Analysis of historical precipitation data
 - Preprocessing and transformation of raw data
@@ -17,7 +17,7 @@ The project demonstrates fundamental data engineering and machine learning pract
 
 ---
 
-## 📂 Dataset
+##  Dataset
 The dataset used is available at:  
 [📎 Precipitation dataset (Google Drive)](https://drive.google.com/file/d/1NPjKJoVKQWytdYYEIFn7WQGVL6Tljo_L/view?usp=drive_link)
 
@@ -25,7 +25,7 @@ The dataset is automatically downloaded and processed by the ETL pipeline.
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 MY-STUFF/
@@ -52,7 +52,6 @@ MY-STUFF/
 │   └── requirements.txt
 ├── .gitignore
 ├── environment.yml           # Conda environment configuration
-├── oryx-build-commands.txt   # Build configuration
 ├── pyproject.toml           # Python project configuration
 ├── README.md
 └── requirements.txt         # Python dependencies
@@ -60,7 +59,7 @@ MY-STUFF/
 
 ---
 
-## 🚀 Installation & Usage
+##  Installation & Usage
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Installation+&+Usage)](https://git.io/typing-svg)
 
 Follow these steps to set up the environment and run the project:
@@ -88,7 +87,7 @@ pip install pandas gdown jupyterlab matplotlib seaborn plotly statsmodels numpy 
 
 ---
 
-## 🔄 ETL Pipeline
+##  ETL Pipeline
 
 The project includes a reusable **ETL package** for processing precipitation data:
 
@@ -124,7 +123,7 @@ python -m etl.main load --input data/processed/dataset_cleaned.csv --table preci
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
+##  Exploratory Data Analysis (EDA)
 
 
 Run the notebook for data analysis:
@@ -141,7 +140,7 @@ The `EDA.ipynb` notebook contains:
 
 ---
 
-## 📷 Example Output
+##  Example Output
 
 When running the ETL pipeline, the output includes:
 
@@ -161,7 +160,7 @@ When running the ETL pipeline, the output includes:
 
 ---
 
-## 🛠️ Dependencies
+##  Dependencies
 
 Main project dependencies:
 - `pandas` - Data manipulation and analysis

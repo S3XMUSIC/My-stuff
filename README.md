@@ -159,8 +159,8 @@ When running the ETL pipeline, the output includes:
 ```
 ---
 ##  Experiments (Please open to more info)
-- [api_example](https://github.com/S3XMUSIC/My-stuff/tree/main/api_example))
-- [parser_example](https://github.com/S3XMUSIC/My-stuff/tree/main/parser_example))
+- [api_example](https://github.com/S3XMUSIC/My-stuff/tree/main/api_example)
+- [parser_example](https://github.com/S3XMUSIC/My-stuff/tree/main/parser_example)
 ---
 
 ##  Dependencies
